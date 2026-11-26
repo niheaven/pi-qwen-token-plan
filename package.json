@@ -1,0 +1,67 @@
+{
+    "name": "pi-qwen-token-plan",
+    "version": "0.1.0",
+    "type": "module",
+    "description": "Qwen Token Plan provider for pi: Responses/Anthropic Messages, hosted tools, quota, media and prompt cache",
+    "license": "MIT",
+    "author": "Hsiao-nan Cheung",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/niheaven/pi-qwen-token-plan.git"
+    },
+    "keywords": [
+        "pi-package",
+        "pi",
+        "pi-coding-agent",
+        "extension",
+        "provider",
+        "qwen",
+        "token-plan",
+        "responses"
+    ],
+    "files": [
+        "extensions",
+        "src",
+        "README.md",
+        "LICENSE"
+    ],
+    "pi": {
+        "extensions": [
+            "./extensions/index.ts"
+        ]
+    },
+    "scripts": {
+        "test": "node --test tests/*.test.ts",
+        "typecheck": "tsc --noEmit",
+        "check": "biome check .",
+        "format": "biome format --write .",
+        "lint": "biome check ."
+    },
+    "engines": {
+        "node": ">=24"
+    },
+    "peerDependencies": {
+        "@earendil-works/pi-ai": "*",
+        "@earendil-works/pi-coding-agent": "*"
+    },
+    "peerDependenciesMeta": {
+        "@earendil-works/pi-ai": {
+            "optional": true
+        },
+        "@earendil-works/pi-coding-agent": {
+            "optional": true
+        }
+    },
+    "devDependencies": {
+        "@biomejs/biome": "2.6.8",
+        "@earendil-works/pi-ai": "^1.6.0",
+        "@earendil-works/pi-coding-agent": "^1.6.0",
+        "@types/node": "^26.6.6",
+        "@types/proper-lockfile": "^4.1.4",
+        "typebox": "^1.4.7",
+        "typescript": "^7.0.2"
+    },
+    "dependencies": {
+        "proper-lockfile": "^4.1.2"
+    }
+}
